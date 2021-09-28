@@ -5,13 +5,15 @@ import {
 
 const formStyle = [
   {
-    width: '10.875rem',
+    width: '100%',
     height: '1.5rem',
     margin: '1.813rem 32.75rem 1.188rem 0',
     fontSize: '1.25rem',
     fontWeight: 'Bold',
     letterSpacing: '-0.18px',
     color: '#888',
+    borderTop: 'solid 1px #e8e8e8',
+    padding: '2rem 0',
   },
 ];
 const FormComponent = () => (
