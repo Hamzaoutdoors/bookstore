@@ -11,35 +11,34 @@ const cardStyle = {
   padding: '1rem 2rem',
 };
 
-const Book = (props) => {
-  const { category, title, author } = props;
-
-  return (
-    <>
-      <div className="book">
-        <Card style={cardStyle}>
-          <Card.Body>
-            <Card.Subtitle className="mb-2 text-muted">{category}</Card.Subtitle>
-            <Card.Title className="book-title">{title}</Card.Title>
-            <Card.Text>{author}</Card.Text>
-            <button type="button" className="book-btn" style={{ border: 'none' }}>Comments</button>
-            <button type="button" className="book-btn">Remove</button>
-            <button type="button" className="book-btn">Edit</button>
-          </Card.Body>
-          <Card.Body style={{ display: 'flex', flexDirection: 'row' }}>
-            <Card.Title>65%</Card.Title>
-            <Card.Text>Completed</Card.Text>
-          </Card.Body>
-          <Card.Body>
-            <Card.Subtitle className="mb-2 text-muted">Current chapter</Card.Subtitle>
-            <Card.Title>Chapter 17</Card.Title>
-            <Button variant="primary">Update progress</Button>
-          </Card.Body>
-        </Card>
-      </div>
-    </>
-  );
-};
+const Book = ({ category, title, author }) => (
+  <>
+    <div className="book">
+      <Card style={cardStyle}>
+        <Card.Body style={{ width: '50%' }}>
+          <Card.Subtitle className="mb-2 text-muted">{category}</Card.Subtitle>
+          <Card.Title className="book-title">{title}</Card.Title>
+          <Card.Text>{author}</Card.Text>
+          <button type="button" className="book-btn" style={{ border: 'none' }}>Comments</button>
+          <button type="button" className="book-btn">Remove</button>
+          <button type="button" className="book-btn">Edit</button>
+        </Card.Body>
+        <Card.Body style={{
+          display: 'flex', flexDirection: 'column', textAlign: 'center', width: '30%',
+        }}
+        >
+          <Card.Title style={{ fontSize: '2rem' }}>65%</Card.Title>
+          <Card.Text>Completed</Card.Text>
+        </Card.Body>
+        <Card.Body style={{ width: '20%' }}>
+          <Card.Subtitle className="mb-2 text-muted">Current chapter</Card.Subtitle>
+          <Card.Title>Chapter 17</Card.Title>
+          <Button variant="primary">Update progress</Button>
+        </Card.Body>
+      </Card>
+    </div>
+  </>
+);
 
 export default Book;
 
