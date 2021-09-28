@@ -1,6 +1,6 @@
 {
   "name": "bookstore",
-  "homepage": "https://bookstore-hamzaoutdoors.herokuapp.com/",
+  "homepage": "https://bookstore-hamzaoutdoors.netlify.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
