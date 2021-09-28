@@ -26,14 +26,3 @@ body {
 .form {
   width: 100%;
 }
-
-/* Books */
-
-.book-btn {
-  margin: 5px 0;
-  padding: 0 15px;
-  background-color: white;
-  color: #4386bf;
-  border: none;
-  border-left: solid 1px #e8e8e8;
-}

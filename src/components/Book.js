@@ -20,7 +20,7 @@ const Book = (props) => {
         <Card style={cardStyle}>
           <Card.Body>
             <Card.Subtitle className="mb-2 text-muted">{category}</Card.Subtitle>
-            <Card.Title>{title}</Card.Title>
+            <Card.Title className="book-title">{title}</Card.Title>
             <Card.Text>{author}</Card.Text>
             <button type="button" className="book-btn" style={{ border: 'none' }}>Comments</button>
             <button type="button" className="book-btn">Remove</button>

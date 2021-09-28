@@ -19,10 +19,12 @@ const FormComponent = () => (
     <h2 style={formStyle[0]}>ADD NEW BOOK</h2>
     <Form>
       <Row className="mb-4">
-        <Col xs={7} controlId="formGridCity">
+        <Col xs={5} controlId="formGridCity">
           <Form.Control placeholder="Book title" />
         </Col>
-
+        <Col xs={2} controlId="formGridCity">
+          <Form.Control placeholder="Author" />
+        </Col>
         <Form.Group as={Col} controlId="formGridState">
           <Form.Select defaultValue="Category">
             <option>Category</option>
