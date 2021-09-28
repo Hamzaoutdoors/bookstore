@@ -22,7 +22,8 @@
 
 </br>
  <div align="center">
-  <em align="center" style>" FAIL = First Attempt In Learning.. "</em><strong> - wise man</strong>
+  <em align="center" style>“The journey of a thousand miles begins with a single step.”
+ "</em><strong> - Lao Tzu</strong>
   </div>
   
 # Bookstore with React & Redux
