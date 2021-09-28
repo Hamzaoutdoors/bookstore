@@ -1,0 +1,46 @@
+.app {
+  margin: 2.3rem 6.25rem;
+}
+
+.nav-links {
+  font-size: 1.2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  text-align: center;
+  width: 3.688rem;
+  color: var(--black-two);
+  font-size: 0.813rem;
+  font-weight: normal;
+  margin: 1.125rem 0 0.688rem 3rem;
+}
+
+.nav-links a:hover {
+  font-weight: bold;
+}
+
+/* Books */
+
+.book-btn {
+  margin: 5px 0;
+  padding: 0 15px;
+  background-color: white;
+  color: #4386bf;
+  border: none;
+  border-left: solid 1px #e8e8e8;
+}
+
+.book-title {
+  width: 12.313rem;
+  height: 1.813rem;
+  margin: 0.188rem 20.188rem 0 0;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: var(--black-two);
+}
