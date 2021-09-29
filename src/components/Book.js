@@ -11,16 +11,16 @@ const cardStyle = {
   padding: '1rem 2rem',
 };
 
-const Book = ({ category, title, author }) => (
+const Book = ({ title, author, rmvBook }) => (
   <>
     <div className="book">
       <Card style={cardStyle}>
         <Card.Body style={{ width: '50%' }}>
-          <Card.Subtitle className="mb-2 text-muted">{category}</Card.Subtitle>
+          <Card.Subtitle className="mb-2 text-muted">Action</Card.Subtitle>
           <Card.Title className="book-title">{title}</Card.Title>
           <Card.Text>{author}</Card.Text>
           <button type="button" className="book-btn" style={{ border: 'none' }}>Comments</button>
-          <button type="button" className="book-btn">Remove</button>
+          <button type="button" className="book-btn" onClick={rmvBook}>Remove</button>
           <button type="button" className="book-btn">Edit</button>
         </Card.Body>
         <Card.Body style={{
@@ -43,7 +43,7 @@ const Book = ({ category, title, author }) => (
 export default Book;
 
 Book.propTypes = {
-  category: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
+  rmvBook: PropTypes.func.isRequired,
 };

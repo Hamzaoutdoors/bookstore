@@ -14,7 +14,7 @@ const NavbarComponent = () => (
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="nav-links">
-          <Link to="/" exact>BOOKS</Link>
+          <Link to="/">BOOKS</Link>
           <Link to="/categories">CATEGORIES</Link>
         </Nav>
       </Navbar.Collapse>
