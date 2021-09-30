@@ -26,16 +26,19 @@ const Book = ({
           <button type="button" className="book-btn">Edit</button>
         </Card.Body>
         <Card.Body style={{
-          display: 'flex', flexDirection: 'column', textAlign: 'center', width: '30%',
+          display: 'flex', flexDirection: 'column', textAlign: 'center', width: '30%', borderRight: 'solid 1px #e8e8e8', marginRight: '70px', paddingRight: '20px',
         }}
         >
-          <Card.Title style={{ fontSize: '2rem' }}>65%</Card.Title>
+          <Card.Title style={{ fontSize: '2rem' }}>
+            {Math.floor(Math.random() * 100) + 1}
+            %
+          </Card.Title>
           <Card.Text>Completed</Card.Text>
         </Card.Body>
         <Card.Body style={{ width: '20%' }}>
-          <Card.Subtitle className="mb-2 text-muted">Current chapter</Card.Subtitle>
+          <Card.Subtitle className="mb-2 text-muted font-weight-light">CURRENT CHAPTER</Card.Subtitle>
           <Card.Title>Chapter 17</Card.Title>
-          <Button variant="primary">Update progress</Button>
+          <Button variant="primary" className="px-4 w-100 mt-4">UPDATE PROGRESS</Button>
         </Card.Body>
       </Card>
     </div>
