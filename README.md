@@ -42,12 +42,12 @@ By building this application, I learned how to use React and Redux.
 
 </br>
 
-<!-- <div align="center">
+ <div align="center">
 <kbd>
-  <img alt="math" src="https://user-images.githubusercontent.com/80895497/134748890-29d5e63a-e1e4-4438-b23b-244824012a17.png">
+  <img alt="math" src="./src\media\screenShot.PNG">
   </kbd>
   </div>
- </br> -->
+ </br> 
 
 
 ## Built With
