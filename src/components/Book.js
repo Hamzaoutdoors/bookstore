@@ -20,22 +20,22 @@ const Book = ({
         <Card.Body style={{ width: '50%' }}>
           <Card.Subtitle className="mb-2 text-muted">{category}</Card.Subtitle>
           <Card.Title className="book-title">{title}</Card.Title>
-          <Card.Text>Anonym</Card.Text>
+          <Card.Text className="book-author">Anonym</Card.Text>
           <button type="button" className="book-btn" style={{ border: 'none' }}>Comments</button>
           <button type="button" className="book-btn" onClick={rmvBook}>Remove</button>
           <button type="button" className="book-btn">Edit</button>
         </Card.Body>
-        <Card.Body style={{
-          display: 'flex', flexDirection: 'column', textAlign: 'center', width: '30%',
-        }}
-        >
-          <Card.Title style={{ fontSize: '2rem' }}>65%</Card.Title>
+        <Card.Body className="book-progress">
+          <Card.Title style={{ fontSize: '2rem' }}>
+            {Math.floor(Math.random() * 100) + 1}
+            %
+          </Card.Title>
           <Card.Text>Completed</Card.Text>
         </Card.Body>
         <Card.Body style={{ width: '20%' }}>
-          <Card.Subtitle className="mb-2 text-muted">Current chapter</Card.Subtitle>
+          <Card.Subtitle className="mb-2 text-muted font-weight-light">CURRENT CHAPTER</Card.Subtitle>
           <Card.Title>Chapter 17</Card.Title>
-          <Button variant="primary">Update progress</Button>
+          <Button variant="primary" className="px-4 w-100 mt-4">UPDATE PROGRESS</Button>
         </Card.Body>
       </Card>
     </div>

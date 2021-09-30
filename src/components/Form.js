@@ -22,7 +22,7 @@ const formStyle = [
 const FormComponent = ({ submitBook }) => {
   const inputRef = useRef([]);
 
-  const inputs = ['title', 'author', 'category', 'alert'];
+  const inputs = ['title', 'category', 'alert'];
 
   useEffect(() => {
     if (inputs.length !== 0) {
@@ -32,19 +32,18 @@ const FormComponent = ({ submitBook }) => {
 
   const addBook = (e) => {
     e.preventDefault();
-    if (inputRef.current[0].value && inputRef.current[2].value) {
+    if (inputRef.current[0].value && inputRef.current[1].value) {
       const newBook = {
         title: inputRef.current[0].value,
-        category: inputRef.current[2].value,
+        category: inputRef.current[1].value,
       };
       submitBook(newBook);
-      const alert = inputRef.current[3];
+      const alert = inputRef.current[2];
       alert.className = 'd-none';
       inputRef.current[0].value = '';
-      inputRef.current[1].value = '';
-      inputRef.current[2].value = 'Category';
+      inputRef.current[1].value = 'Category';
     } else {
-      const alert = inputRef.current[3];
+      const alert = inputRef.current[2];
       alert.className = 'd-block';
     }
   };
@@ -54,7 +53,7 @@ const FormComponent = ({ submitBook }) => {
       <h2 style={formStyle[0]}>ADD NEW BOOK</h2>
       <Alert
         variant="danger"
-        ref={(el) => inputRef.current[3] = el}
+        ref={(el) => inputRef.current[2] = el}
         className="d-none"
       >
         <Alert.Heading className="text-danger">
@@ -64,22 +63,18 @@ const FormComponent = ({ submitBook }) => {
       </Alert>
       <Form>
         <Row className="mb-4">
-          <Col xs={5}>
+          <Col xs={7}>
             <Form.Control
               placeholder="Book title"
               ref={(el) => inputRef.current[0] = el}
-            />
-          </Col>
-          <Col xs={3}>
-            <Form.Control
-              placeholder="Book author"
-              ref={(el) => inputRef.current[1] = el}
+              className="py-2"
             />
           </Col>
           <Form.Group as={Col}>
             <Form.Select
               defaultValue="Category"
-              ref={(el) => inputRef.current[2] = el}
+              ref={(el) => inputRef.current[1] = el}
+              className="py-2"
             >
               <option>Category</option>
               <option>Action</option>
@@ -87,7 +82,13 @@ const FormComponent = ({ submitBook }) => {
               <option>Romance</option>
             </Form.Select>
           </Form.Group>
-          <Button as={Col} variant="primary" type="submit" onClick={addBook}>
+          <Button
+            as={Col}
+            className="py-2"
+            variant="primary"
+            type="submit"
+            onClick={addBook}
+          >
             ADD BOOK
           </Button>
         </Row>
