@@ -43,7 +43,7 @@ const FormComponent = ({ submitBook }) => {
       inputRef.current[0].value = '';
       inputRef.current[1].value = 'Category';
     } else {
-      const alert = inputRef.current[3];
+      const alert = inputRef.current[2];
       alert.className = 'd-block';
     }
   };
