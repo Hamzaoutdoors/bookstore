@@ -1,7 +1,7 @@
 /* eslint-disable no-return-assign */
 import React, { useEffect, useRef } from 'react';
 import {
-  Row, Form, Button, Col,
+  Alert, Row, Form, Button, Col,
 } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
@@ -22,7 +22,7 @@ const formStyle = [
 const FormComponent = ({ submitBook }) => {
   const inputRef = useRef([]);
 
-  const inputs = ['title', 'author'];
+  const inputs = ['title', 'author', 'category', 'alert'];
 
   useEffect(() => {
     if (inputs.length !== 0) {
@@ -32,20 +32,36 @@ const FormComponent = ({ submitBook }) => {
 
   const addBook = (e) => {
     e.preventDefault();
-    if (inputRef.current[0].value && inputRef.current[1].value) {
+    if (inputRef.current[0].value && inputRef.current[2].value) {
       const newBook = {
         title: inputRef.current[0].value,
-        author: inputRef.current[1].value,
+        category: inputRef.current[2].value,
       };
       submitBook(newBook);
+      const alert = inputRef.current[3];
+      alert.className = 'd-none';
       inputRef.current[0].value = '';
       inputRef.current[1].value = '';
+      inputRef.current[2].value = 'Category';
+    } else {
+      const alert = inputRef.current[3];
+      alert.className = 'd-block';
     }
   };
 
   return (
     <div className="form">
       <h2 style={formStyle[0]}>ADD NEW BOOK</h2>
+      <Alert
+        variant="danger"
+        ref={(el) => inputRef.current[3] = el}
+        className="d-none"
+      >
+        <Alert.Heading className="text-danger">
+          {' '}
+          Please Add A Book!
+        </Alert.Heading>
+      </Alert>
       <Form>
         <Row className="mb-4">
           <Col xs={5}>
@@ -61,7 +77,10 @@ const FormComponent = ({ submitBook }) => {
             />
           </Col>
           <Form.Group as={Col}>
-            <Form.Select defaultValue="Category">
+            <Form.Select
+              defaultValue="Category"
+              ref={(el) => inputRef.current[2] = el}
+            >
               <option>Category</option>
               <option>Action</option>
               <option>Drama</option>
