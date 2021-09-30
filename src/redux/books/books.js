@@ -3,7 +3,7 @@ import axios from 'axios';
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 const GET_BOOKS = 'bookStore/books/GET_BOOKS';
-const baseURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/pu9kvo4W2aaAHOXLkIzL/books';
+const baseURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/3DZF8DsRlQyVDKD7lPRz/books';
 
 const initialBooks = [];
 
@@ -43,7 +43,7 @@ export const getBook = () => async (dispatch) => {
     objectArray.forEach(([key, value]) => {
       const item = { ...value, item_id: key };
       const itemObj = Object.values(item);
-      booksArray.push(itemObj[0]);
+      booksArray.push({ ...itemObj[0], item_id: itemObj[1] });
     });
     dispatch({
       type: GET_BOOKS,
