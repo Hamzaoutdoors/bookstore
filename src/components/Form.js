@@ -47,6 +47,19 @@ const FormComponent = ({ submitBook }) => {
       alert.className = 'd-block';
     }
   };
+  const bookCategory = [
+    'Category',
+    'Fiction',
+    'Thriller',
+    'Dark',
+    'Historical',
+    'Romance',
+    'Science Fiction',
+    'Fantasy',
+    'Dystopian',
+    'Realist',
+    'Horror',
+  ];
 
   return (
     <div className="form">
@@ -76,10 +89,11 @@ const FormComponent = ({ submitBook }) => {
               ref={(el) => inputRef.current[1] = el}
               className="py-2"
             >
-              <option>Category</option>
-              <option>Action</option>
-              <option>Drama</option>
-              <option>Romance</option>
+              {
+               bookCategory.map((category) => (
+                 <option key={bookCategory.indexOf(category)}>{category}</option>
+               ))
+              }
             </Form.Select>
           </Form.Group>
           <Button

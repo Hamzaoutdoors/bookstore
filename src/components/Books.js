@@ -19,7 +19,6 @@ const Books = () => {
       title: book.title,
       category: book.category,
     };
-    // dispatch an action and pass it the newBook object (your action's payload)
     dispatch(createBook(newBook));
   };
 

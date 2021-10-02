@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
+import ChapterProgress from './ChapterProgress';
 
 const cardStyle = {
   width: '100%',
@@ -26,11 +27,7 @@ const Book = ({
           <button type="button" className="book-btn">Edit</button>
         </Card.Body>
         <Card.Body className="book-progress">
-          <Card.Title style={{ fontSize: '2rem' }}>
-            {Math.floor(Math.random() * 100) + 1}
-            %
-          </Card.Title>
-          <Card.Text>Completed</Card.Text>
+          <ChapterProgress />
         </Card.Body>
         <Card.Body style={{ width: '20%' }}>
           <Card.Subtitle className="mb-2 text-muted font-weight-light">CURRENT CHAPTER</Card.Subtitle>

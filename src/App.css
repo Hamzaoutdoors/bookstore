@@ -78,8 +78,33 @@
   border-right: solid 1px #e8e8e8;
   margin-right: 70px;
   padding-right: 20px;
-  background-image: url('./media/bg-progress.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 100%;
+}
+
+/* Progress circle */
+
+.percentageCircleContainer,
+.percentageCircle > circle {
+  width: 100px;
+  height: 100px;
+}
+
+.percentageCircleContainer {
+  position: relative;
+  margin-right: 0.8rem;
+}
+
+.percentageCircle > circle {
+  fill: none;
+  stroke-width: 5px;
+  stroke: #000;
+  transform: translate(10px, 10px);
+}
+
+circle.circle1 {
+  stroke: #e8e8e8;
+  stroke-dashoffset: 0;
+}
+
+.fontColor1 {
+  color: #121212;
 }
