@@ -28,7 +28,7 @@
   border-radius: 50%;
   right: 20px;
   top: 15px;
-  color: var(--azure);
+  fill: var(--azure);
   box-shadow: -3px -3px 12px 0 rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }

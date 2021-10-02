@@ -37,11 +37,13 @@ const Books = () => {
     />
   ));
   return (
-
     <div className="books">
-      { booksList }
+      <div className="container-fluid">
+        { booksList }
+      </div>
       <FormComponent submitBook={submitBookToStore} />
     </div>
+
   );
 };
 
