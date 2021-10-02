@@ -53,6 +53,7 @@ By building this application, I learned how to use React and Redux.
 ## Built With
 
 - JSX, JavaScript with ES6
+- Interacting [Bookstore API](https://www.notion.so/Bookstore-API-51ea269061f849118c65c0a53e88a739)
 - React.js with redux
 - Linters, Node.js, Git, Flexbox, Bootstrap, Webpack
 
