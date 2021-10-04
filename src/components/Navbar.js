@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const NavbarComponent = () => (
   <Navbar bg="light" expand="lg">
     <Container className="nav-wrapper">
-      <Icon.People className="login-icon" />
+      <Icon.PersonFill className="login-icon" />
       <Navbar.Brand href="#home">
         <h1 className="logo">Bookstore CMS</h1>
       </Navbar.Brand>

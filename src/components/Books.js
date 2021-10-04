@@ -19,7 +19,6 @@ const Books = () => {
       title: book.title,
       category: book.category,
     };
-    // dispatch an action and pass it the newBook object (your action's payload)
     dispatch(createBook(newBook));
   };
 
@@ -38,11 +37,13 @@ const Books = () => {
     />
   ));
   return (
-
     <div className="books">
-      { booksList }
+      <div className="container-fluid">
+        { booksList }
+      </div>
       <FormComponent submitBook={submitBookToStore} />
     </div>
+
   );
 };
 
